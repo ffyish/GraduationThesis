@@ -1,0 +1,6 @@
+*.toml
+*.lock
+.venv
+__pycahce__
+cv/.github
+cv/images

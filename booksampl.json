@@ -1,0 +1,21 @@
+{
+    "Nodes":[
+        {"id":"f1","attrs":{"id":"f1"}},
+        {"id":"f2","attrs":{"id":"f1"}},
+        {"id":"f3","attrs":{"id":"f1"}},
+        {"id":"f4","attrs":{"id":"f1"}},
+        {"id":"f5","attrs":{"id":"f1"}},
+        {"id":"f6","attrs":{"id":"f1"}},
+        {"id":"f7","attrs":{"id":"f1"}},
+        {"id":"f8","attrs":{"id":"f1"}}
+    ],
+    "Edges":[
+        {"from":"f1", "to":"f2", "attrs":{"a":"b"}},
+        {"from":"f4", "to":"f2", "attrs":{"a":"b"}},
+        {"from":"f8", "to":"f7", "attrs":{"a":"b"}},
+        {"from":"f2", "to":"f7", "attrs":{"a":"b"}},
+        {"from":"f2", "to":"f3", "attrs":{"a":"b"}},
+        {"from":"f6", "to":"f5", "attrs":{"a":"b"}},
+        {"from":"f5", "to":"f3", "attrs":{"a":"b"}}
+    ]
+}

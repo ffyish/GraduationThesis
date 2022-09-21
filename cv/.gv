@@ -1,0 +1,668 @@
+digraph gocallvis {
+    label="github.com/ofabry/go-callvis";
+    labeljust="l";
+    fontname="Arial";
+    fontsize="14";
+    rankdir="LR";
+    bgcolor="lightgray";
+    style="solid";
+    penwidth="0.5";
+    pad="0.0";
+    nodesep="0.35";
+
+    node [shape="box" style="filled,rounded" fillcolor="honeydew" fontname="Verdana" penwidth="1.0" margin="0.05,0.0"];
+    edge [minlen="2"]
+
+    subgraph "cluster_focus" {
+        labelloc="t";
+labeljust="c";
+fontsize="18";
+bgcolor="#e6ecfa";
+label="main";
+        
+        "(*github.com/ofabry/go-callvis.analysis).CacheImg$1" [ fillcolor="lightblue" label="(*analysis).CacheImg$1" style="dotted,filled" tooltip="(*github.com/ofabry/go-callvis.analysis).CacheImg$1 | defined in analysis.go:325" ]
+        "github.com/ofabry/go-callvis.pathExists" [ fillcolor="lightblue" label="pathExists" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.pathExists | defined in analysis.go:342\nat analysis.go:347: calling [os.IsNotExist]\nat analysis.go:343: calling [os.Stat]" ]
+        "github.com/ofabry/go-callvis.init" [ fillcolor="lightblue" label="init" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.init | defined in .:0\nat main.go:33: calling [flag.String]\nat main.go:34: calling [flag.String]\nat main.go:35: calling [flag.String]\nat main.go:36: calling [flag.String]\nat main.go:37: calling [flag.String]\nat main.go:42: calling [flag.String]\nat main.go:44: calling [flag.String]\nat main.go:45: calling [flag.String]\nat main.go:46: calling [flag.String]\nat main.go:47: calling [flag.String]\nat main.go:47: calling [fmt.Sprintf]\nat .:0: calling [github.com/ofabry/go-callvis.init#1]\nat main.go:38: calling [flag.Bool]\nat main.go:39: calling [flag.Bool]\nat main.go:40: calling [flag.Bool]\nat main.go:41: calling [flag.Bool]\nat main.go:43: calling [flag.Bool]\nat main.go:50: calling [flag.Bool]\nat main.go:51: calling [flag.Bool]" ]
+        "github.com/ofabry/go-callvis.init#1" [ label="init#1" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.init#1 | defined in main.go:54\nat main.go:58: calling [flag.Float64Var]\nat main.go:59: calling [flag.StringVar]\nat main.go:60: calling [flag.StringVar]\nat main.go:61: calling [flag.StringVar]\nat main.go:57: calling [flag.UintVar]\nat main.go:55: calling [flag.Var]" fillcolor="lightblue" ]
+        "github.com/ofabry/go-callvis.printOutput$6$1" [ fillcolor="lightblue" label="printOutput$6$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$6$1 | defined in output.go:209\nat output.go:308: calling [(*go/types.Interface).String]\nat output.go:242: calling [(*go/types.Signature).Recv]\nat output.go:308: calling [(*go/types.Signature).Recv]\nat output.go:306: calling [(*go/types.Signature).Recv]\nat output.go:233: calling [(*golang.org/x/tools/go/ssa.Function).RelString]\nat output.go:307: calling [(*golang.org/x/tools/go/ssa.Function).RelString]\nat output.go:267: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:267: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:308: calling [(*go/types.Array).String]\nat output.go:214: calling [path/filepath.Base]\nat output.go:215: calling [path/filepath.Base]\nat output.go:243: calling [strings.Split]\nat output.go:307: calling [strings.Split]\nat output.go:308: calling [(*go/types.Map).String]\nat output.go:308: calling [(*go/types.Slice).String]\nat output.go:229: calling [(*go/types.Package).Path]\nat output.go:229: calling [(*go/types.Package).Path]\nat output.go:247: calling [(*go/types.Package).Path]\nat output.go:279: calling [(*go/types.Package).Path]\nat output.go:281: calling [(*go/types.Package).Path]\nat output.go:308: calling [(*golang.org/x/tools/go/internal/gcimporter.dddSlice).String]\nat output.go:308: calling [(*go/types.Named).String]\nat output.go:267: calling [(*go/types.object).Exported]\nat output.go:308: calling [(*golang.org/x/tools/go/ssa.opaqueType).String]\nat output.go:308: calling [(golang.org/x/tools/go/internal/gcimporter.anyType).String]\nat output.go:259: calling [(*go/types.Package).Name]\nat output.go:277: calling [(*go/types.Package).Name]\nat output.go:308: calling [(*go/types.Pointer).String]\nat output.go:308: calling [(*go/types.Basic).String]\nat output.go:308: calling [(*go/types.Tuple).String]\nat output.go:214: calling [fmt.Sprintf]\nat output.go:215: calling [fmt.Sprintf]\nat output.go:218: calling [fmt.Sprintf]\nat output.go:220: calling [fmt.Sprintf]\nat output.go:259: calling [fmt.Sprintf]\nat output.go:292: calling [fmt.Sprintf]\nat output.go:294: calling [fmt.Sprintf]\nat output.go:321: calling [fmt.Sprintf]\nat output.go:211: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:218: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:220: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:336: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:308: calling [(*go/types.object).Type]\nat output.go:308: calling [(*go/types.Struct).String]\nat output.go:247: calling [go/build.Import]\nat output.go:308: calling [(*go/types.Signature).String]\nat output.go:308: calling [(*go/types.TypeParam).String]\nat output.go:308: calling [(*go/types.Union).String]\nat output.go:308: calling [(*go/types.Chan).String]\nat output.go:237: calling [(*golang.org/x/tools/go/ssa.Function).Parent]\nat output.go:238: calling [(*golang.org/x/tools/go/ssa.Function).Parent]\nat output.go:265: calling [(*golang.org/x/tools/go/ssa.Function).Parent]" ]
+        "github.com/ofabry/go-callvis.printOutput$3" [ style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$3 | defined in output.go:113\nat output.go:114: calling [(*go/types.Package).Path]\nat output.go:116: calling [strings.HasPrefix]" fillcolor="lightblue" label="printOutput$3" ]
+        "github.com/ofabry/go-callvis.outputDot" [ fillcolor="lightblue" label="outputDot" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.outputDot | defined in main.go:92\nat main.go:96: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]\nat main.go:100: calling [(*github.com/ofabry/go-callvis.analysis).Render]\nat main.go:107: calling [fmt.Sprintf]\nat main.go:107: calling [io/ioutil.WriteFile]\nat main.go:97: calling [log.Fatalf]\nat main.go:102: calling [log.Fatalf]\nat main.go:109: calling [log.Fatalf]\nat main.go:105: calling [log.Println]\nat main.go:112: calling [fmt.Print]\nat main.go:94: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]" ]
+        "(*github.com/ofabry/go-callvis.analysis).OptsSetup" [ fillcolor="lightblue" label="(*analysis).OptsSetup" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).OptsSetup | defined in analysis.go:147" ]
+        "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" [ fillcolor="lightblue" label="(*analysis).ProcessListArgs" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).ProcessListArgs | defined in analysis.go:160\nat analysis.go:172: calling [errors.New]\nat analysis.go:166: calling [strings.Split]\nat analysis.go:178: calling [strings.Split]\nat analysis.go:185: calling [strings.Split]\nat analysis.go:192: calling [strings.Split]\nat analysis.go:167: calling [strings.TrimSpace]\nat analysis.go:179: calling [strings.TrimSpace]\nat analysis.go:186: calling [strings.TrimSpace]\nat analysis.go:193: calling [strings.TrimSpace]" ]
+        "(*github.com/ofabry/go-callvis.analysis).Render" [ fillcolor="lightblue" label="(*analysis).Render" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).Render | defined in analysis.go:239\nat analysis.go:248: calling [strings.Contains]\nat analysis.go:262: calling [fmt.Fprintf]\nat analysis.go:254: calling [(*go/types.Package).Name]\nat analysis.go:272: calling [github.com/ofabry/go-callvis.logf]\nat analysis.go:249: calling [fmt.Errorf]\nat analysis.go:259: calling [fmt.Errorf]\nat analysis.go:264: calling [fmt.Errorf]\nat analysis.go:268: calling [fmt.Errorf]\nat analysis.go:288: calling [fmt.Errorf]\nat analysis.go:275: calling [github.com/ofabry/go-callvis.printOutput]\nat analysis.go:272: calling [(*go/types.Package).Path]\nat analysis.go:255: calling [(*go/types.Package).Path]\nat analysis.go:247: calling [(*golang.org/x/tools/go/ssa.Program).ImportedPackage]\nat analysis.go:267: calling [(*golang.org/x/tools/go/ssa.Program).ImportedPackage]" ]
+        "github.com/ofabry/go-callvis.printOutput" [ fillcolor="lightblue" label="printOutput" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.printOutput | defined in output.go:24\nat output.go:413: calling [fmt.Sprintf]\nat output.go:443: calling [(*github.com/ofabry/go-callvis.dotGraph).WriteDot]\nat output.go:67: calling [(*golang.org/x/tools/go/callgraph.Graph).DeleteSyntheticNodes]\nat output.go:447: calling [(*bytes.Buffer).Bytes]\nat output.go:434: calling [fmt.Sprint]\nat output.go:435: calling [fmt.Sprint]\nat output.go:436: calling [fmt.Sprint]\nat output.go:437: calling [fmt.Sprint]\nat output.go:438: calling [fmt.Sprint]\nat output.go:143: calling [golang.org/x/tools/go/callgraph.GraphVisitEdges]\nat output.go:69: calling [github.com/ofabry/go-callvis.logf]\nat output.go:70: calling [github.com/ofabry/go-callvis.logf]\nat output.go:71: calling [github.com/ofabry/go-callvis.logf]\nat output.go:72: calling [github.com/ofabry/go-callvis.logf]\nat output.go:421: calling [github.com/ofabry/go-callvis.logf]\nat output.go:425: calling [(*go/types.Package).Path]\nat output.go:46: calling [github.com/ofabry/go-callvis.NewDotCluster]\nat output.go:56: calling [(*go/types.Package).Name]" ]
+        "github.com/ofabry/go-callvis.NewDotCluster" [ fillcolor="lightblue" label="NewDotCluster" penwidth="1.5" tooltip="github.com/ofabry/go-callvis.NewDotCluster | defined in dot.go:74" ]
+        "github.com/ofabry/go-callvis.logf" [ fillcolor="lightblue" label="logf" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.logf | defined in main.go:64\nat main.go:66: calling [log.Printf]" ]
+        "github.com/ofabry/go-callvis.printOutput$6" [ fillcolor="lightblue" label="printOutput$6" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$6 | defined in output.go:143\nat output.go:149: calling [(*go/token.FileSet).Position]\nat output.go:150: calling [(*go/token.FileSet).Position]\nat output.go:151: calling [(*go/token.FileSet).Position]\nat output.go:149: calling [(*golang.org/x/tools/go/ssa.Function).Pos]\nat output.go:150: calling [(*golang.org/x/tools/go/ssa.Function).Pos]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:356: calling [(*golang.org/x/tools/go/ssa.Call).Common]\nat output.go:156: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:356: calling [(*golang.org/x/tools/go/ssa.CallCommon).StaticCallee]\nat output.go:379: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:153: calling [path/filepath.Base]\nat output.go:377: calling [path/filepath.Base]\nat output.go:375: calling [fmt.Sprintf]\nat output.go:383: calling [fmt.Sprintf]\nat output.go:397: calling [fmt.Sprintf]\nat output.go:184: calling [github.com/ofabry/go-callvis.logf]\nat output.go:207: calling [github.com/ofabry/go-callvis.logf]\nat output.go:192: calling [github.com/ofabry/go-callvis.logf]\nat output.go:199: calling [github.com/ofabry/go-callvis.logf]\nat output.go:165: calling [github.com/ofabry/go-callvis.printOutput$1]\nat output.go:171: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:171: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:349: calling [github.com/ofabry/go-callvis.printOutput$6$1]\nat output.go:350: calling [github.com/ofabry/go-callvis.printOutput$6$1]\nat output.go:383: calling [(golang.org/x/tools/go/callgraph.Edge).Description]\nat output.go:356: calling [(*golang.org/x/tools/go/ssa.Defer).Common]\nat output.go:183: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:183: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:198: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:198: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:191: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:191: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:151: calling [(golang.org/x/tools/go/callgraph.Edge).Pos]\nat output.go:356: calling [(*golang.org/x/tools/go/ssa.Go).Common]\nat output.go:176: calling [github.com/ofabry/go-callvis.printOutput$5]" ]
+        "github.com/ofabry/go-callvis.isSynthetic" [ penwidth="0.5" tooltip="github.com/ofabry/go-callvis.isSynthetic | defined in output.go:15" fillcolor="lightblue" label="isSynthetic" ]
+        "github.com/ofabry/go-callvis.inStd" [ fillcolor="lightblue" label="inStd" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.inStd | defined in output.go:19\nat output.go:20: calling [(*go/types.Package).Path]\nat output.go:20: calling [go/build.Import]" ]
+        "github.com/ofabry/go-callvis.printOutput$1" [ fillcolor="lightblue" label="printOutput$1" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$1 | defined in output.go:74\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:84: calling [(*go/types.Package).Path]\nat output.go:84: calling [(*go/types.Package).Path]\nat output.go:91: calling [(*go/types.Package).Path]\nat output.go:91: calling [(*go/types.Package).Path]\nat output.go:83: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:90: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:97: calling [github.com/ofabry/go-callvis.logf]" ]
+        "github.com/ofabry/go-callvis.printOutput$5" [ fillcolor="lightblue" label="printOutput$5" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$5 | defined in output.go:133\nat output.go:136: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:136: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:136: calling [(*go/types.object).Exported]" ]
+        "github.com/ofabry/go-callvis.printOutput$2" [ fillcolor="lightblue" label="printOutput$2" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$2 | defined in output.go:103\nat output.go:104: calling [(*go/types.Package).Path]\nat output.go:106: calling [strings.HasPrefix]" ]
+        "github.com/ofabry/go-callvis.printOutput$4" [ fillcolor="lightblue" label="printOutput$4" style="dotted,filled" tooltip="github.com/ofabry/go-callvis.printOutput$4 | defined in output.go:123\nat output.go:126: calling [strings.HasPrefix]\nat output.go:124: calling [(*go/types.Package).Path]" ]
+        "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" [ label="(*dotGraph).WriteDot" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.dotGraph).WriteDot | defined in dot.go:133\nat dot.go:144: calling [(*bytes.Buffer).WriteTo]\nat dot.go:141: calling [(*text/template.Template).Execute]\nat dot.go:134: calling [text/template.New]\nat dot.go:136: calling [(*text/template.Template).Parse]" fillcolor="lightblue" ]
+        "github.com/ofabry/go-callvis.mainPackages" [ fillcolor="lightblue" label="mainPackages" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.mainPackages | defined in analysis.go:50\nat analysis.go:58: calling [fmt.Errorf]\nat analysis.go:53: calling [(*golang.org/x/tools/go/ssa.Package).Func]\nat analysis.go:53: calling [(*go/types.Package).Name]" ]
+        "(github.com/ofabry/go-callvis.dotAttrs).List" [ tooltip="(github.com/ofabry/go-callvis.dotAttrs).List | defined in dot.go:106\nat dot.go:109: calling [fmt.Sprintf]" fillcolor="lightblue" label="(dotAttrs).List" penwidth="1.5" ]
+        "github.com/ofabry/go-callvis.main" [ fillcolor="lightblue" label="main" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.main | defined in main.go:122\nat main.go:133: calling [flag.NArg]\nat main.go:126: calling [github.com/ofabry/go-callvis.Version]\nat main.go:126: calling [fmt.Fprintln]\nat main.go:130: calling [log.SetFlags]\nat main.go:123: calling [flag.Parse]\nat main.go:127: calling [os.Exit]\nat main.go:136: calling [os.Exit]\nat main.go:134: calling [fmt.Fprint]\nat main.go:139: calling [flag.Args]\nat main.go:135: calling [flag.PrintDefaults]\nat main.go:146: calling [log.Fatal]\nat main.go:150: calling [github.com/ofabry/go-callvis.outputDot]\nat main.go:145: calling [(*github.com/ofabry/go-callvis.analysis).DoAnalysis]" ]
+        "github.com/ofabry/go-callvis.Version" [ tooltip="github.com/ofabry/go-callvis.Version | defined in version.go:12\nat version.go:13: calling [fmt.Sprintf]" fillcolor="lightblue" label="Version" penwidth="1.5" ]
+        "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" [ penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).DoAnalysis | defined in analysis.go:74\nat analysis.go:97: calling [golang.org/x/tools/go/ssa/ssautil.AllPackages]\nat analysis.go:118: calling [golang.org/x/tools/go/callgraph/rta.Analyze]\nat analysis.go:93: calling [fmt.Errorf]\nat analysis.go:135: calling [fmt.Errorf]\nat analysis.go:105: calling [golang.org/x/tools/go/callgraph/static.CallGraph]\nat analysis.go:116: calling [(*golang.org/x/tools/go/ssa.Package).Func]\nat analysis.go:107: calling [golang.org/x/tools/go/callgraph/cha.CallGraph]\nat analysis.go:92: calling [golang.org/x/tools/go/packages.PrintErrors]\nat analysis.go:109: calling [(*golang.org/x/tools/go/ssa.Program).AllPackages]\nat analysis.go:120: calling [(*golang.org/x/tools/go/ssa.Program).AllPackages]\nat analysis.go:109: calling [github.com/ofabry/go-callvis.mainPackages]\nat analysis.go:120: calling [github.com/ofabry/go-callvis.mainPackages]\nat analysis.go:87: calling [golang.org/x/tools/go/packages.Load]\nat analysis.go:98: calling [(*golang.org/x/tools/go/ssa.Program).Build]\nat analysis.go:129: calling [golang.org/x/tools/go/pointer.Analyze]" fillcolor="lightblue" label="(*analysis).DoAnalysis" ]
+        "(*github.com/ofabry/go-callvis.analysis).CacheImg" [ fillcolor="lightblue" label="(*analysis).CacheImg" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).CacheImg | defined in analysis.go:315\nat analysis.go:324: calling [path/filepath.Join]\nat analysis.go:334: calling [github.com/ofabry/go-callvis.copyFile]\nat analysis.go:328: calling [os.MkdirAll]\nat analysis.go:325: calling [strings.TrimRightFunc]" ]
+        "github.com/ofabry/go-callvis.copyFile" [ fillcolor="lightblue" label="copyFile" penwidth="0.5" tooltip="github.com/ofabry/go-callvis.copyFile | defined in analysis.go:353\nat analysis.go:364: calling [os.Open]\nat analysis.go:354: calling [os.Stat]\nat analysis.go:370: calling [os.Create]\nat analysis.go:368: calling [(*os.File).Close]\nat analysis.go:374: calling [(*os.File).Close]\nat analysis.go:360: calling [(io/fs.FileMode).IsRegular]\nat analysis.go:360: calling [(*os.fileStat).Mode]\nat analysis.go:375: calling [io.Copy]\nat analysis.go:361: calling [fmt.Errorf]" ]
+        "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" [ fillcolor="lightblue" label="(*analysis).FindCachedImg" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).FindCachedImg | defined in analysis.go:294\nat analysis.go:306: calling [github.com/ofabry/go-callvis.pathExists]\nat analysis.go:307: calling [log.Println]\nat analysis.go:311: calling [log.Println]\nat analysis.go:304: calling [path/filepath.Join]" ]
+        "(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP" [ fillcolor="lightblue" label="(*analysis).OverrideByHTTP" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP | defined in analysis.go:207\nat analysis.go:208: calling [(*net/http.Request).FormValue]\nat analysis.go:213: calling [(*net/http.Request).FormValue]\nat analysis.go:216: calling [(*net/http.Request).FormValue]\nat analysis.go:219: calling [(*net/http.Request).FormValue]\nat analysis.go:222: calling [(*net/http.Request).FormValue]\nat analysis.go:225: calling [(*net/http.Request).FormValue]\nat analysis.go:228: calling [(*net/http.Request).FormValue]\nat analysis.go:231: calling [(*net/http.Request).FormValue]" ]
+        "(github.com/ofabry/go-callvis.dotAttrs).Lines" [ label="(dotAttrs).Lines" penwidth="1.5" tooltip="(github.com/ofabry/go-callvis.dotAttrs).Lines | defined in dot.go:118\nat dot.go:119: calling [fmt.Sprintf]\nat dot.go:119: calling [strings.Join]\nat dot.go:119: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" fillcolor="lightblue" ]
+        "(github.com/ofabry/go-callvis.dotAttrs).String" [ fillcolor="lightblue" label="(dotAttrs).String" penwidth="1.5" tooltip="(github.com/ofabry/go-callvis.dotAttrs).String | defined in dot.go:114\nat dot.go:115: calling [(github.com/ofabry/go-callvis.dotAttrs).List]\nat dot.go:115: calling [strings.Join]" ]
+        "(*github.com/ofabry/go-callvis.dotCluster).String" [ fillcolor="lightblue" label="(*dotCluster).String" penwidth="1.5" tooltip="(*github.com/ofabry/go-callvis.dotCluster).String | defined in dot.go:82\nat dot.go:83: calling [fmt.Sprintf]" ]
+        
+        subgraph "cluster_bytes" {
+        penwidth="0.8";
+fontsize="16";
+fillcolor="#E0FFE1";
+label="bytes";
+tooltip="package: bytes";
+style="filled";
+fontname="Tahoma bold";
+rank="sink";
+URL="/?f=bytes";
+        
+        "(*bytes.Buffer).WriteTo" [ fillcolor="#adedad" label="(*Buffer).WriteTo" penwidth="1.5" tooltip="(*bytes.Buffer).WriteTo | defined in buffer.go:236" ]
+        "(*bytes.Buffer).Bytes" [ fillcolor="#adedad" label="(*Buffer).Bytes" penwidth="1.5" tooltip="(*bytes.Buffer).Bytes | defined in buffer.go:54" ]
+        
+    }
+
+        subgraph "cluster_errors" {
+        fontname="Tahoma bold";
+rank="sink";
+URL="/?f=errors";
+tooltip="package: errors";
+fontsize="16";
+style="filled";
+fillcolor="#E0FFE1";
+penwidth="0.8";
+label="errors";
+        
+        "errors.New" [ fillcolor="#adedad" label="New" penwidth="1.5" tooltip="errors.New | defined in errors.go:58" ]
+        
+    }
+
+        subgraph "cluster_flag" {
+        tooltip="package: flag";
+penwidth="0.8";
+style="filled";
+fontname="Tahoma bold";
+URL="/?f=flag";
+fontsize="16";
+fillcolor="#E0FFE1";
+rank="sink";
+label="flag";
+        
+        "flag.String" [ fillcolor="#adedad" label="String" penwidth="1.5" tooltip="flag.String | defined in flag.go:781" ]
+        "flag.Bool" [ fillcolor="#adedad" label="Bool" penwidth="1.5" tooltip="flag.Bool | defined in flag.go:651" ]
+        "flag.Var" [ label="Var" penwidth="1.5" tooltip="flag.Var | defined in flag.go:893" fillcolor="#adedad" ]
+        "flag.UintVar" [ fillcolor="#adedad" label="UintVar" penwidth="1.5" tooltip="flag.UintVar | defined in flag.go:715" ]
+        "flag.Float64Var" [ tooltip="flag.Float64Var | defined in flag.go:793" fillcolor="#adedad" label="Float64Var" penwidth="1.5" ]
+        "flag.StringVar" [ label="StringVar" penwidth="1.5" tooltip="flag.StringVar | defined in flag.go:767" fillcolor="#adedad" ]
+        "flag.Parse" [ tooltip="flag.Parse | defined in flag.go:1034" fillcolor="#adedad" label="Parse" penwidth="1.5" ]
+        "flag.NArg" [ fillcolor="#adedad" label="NArg" penwidth="1.5" tooltip="flag.NArg | defined in flag.go:621" ]
+        "flag.PrintDefaults" [ tooltip="flag.PrintDefaults | defined in flag.go:562" fillcolor="#adedad" label="PrintDefaults" penwidth="1.5" ]
+        "flag.Args" [ fillcolor="#adedad" label="Args" penwidth="1.5" tooltip="flag.Args | defined in flag.go:627" ]
+        
+    }
+
+        subgraph "cluster_fmt" {
+        fontname="Tahoma bold";
+label="fmt";
+tooltip="package: fmt";
+penwidth="0.8";
+style="filled";
+fillcolor="#E0FFE1";
+rank="sink";
+URL="/?f=fmt";
+fontsize="16";
+        
+        "fmt.Sprintf" [ fillcolor="#adedad" label="Sprintf" penwidth="1.5" tooltip="fmt.Sprintf | defined in print.go:217" ]
+        "fmt.Sprint" [ fillcolor="#adedad" label="Sprint" penwidth="1.5" tooltip="fmt.Sprint | defined in print.go:247" ]
+        "fmt.Errorf" [ tooltip="fmt.Errorf | defined in errors.go:17" fillcolor="#adedad" label="Errorf" penwidth="1.5" ]
+        "fmt.Fprintf" [ fillcolor="#adedad" label="Fprintf" penwidth="1.5" tooltip="fmt.Fprintf | defined in print.go:202" ]
+        "fmt.Print" [ penwidth="1.5" tooltip="fmt.Print | defined in print.go:241" fillcolor="#adedad" label="Print" ]
+        "fmt.Fprintln" [ fillcolor="#adedad" label="Fprintln" penwidth="1.5" tooltip="fmt.Fprintln | defined in print.go:262" ]
+        "fmt.Fprint" [ fillcolor="#adedad" label="Fprint" penwidth="1.5" tooltip="fmt.Fprint | defined in print.go:230" ]
+        
+    }
+
+        subgraph "cluster_go/build" {
+        style="filled";
+fontname="Tahoma bold";
+rank="sink";
+label="go/build";
+URL="/?f=go/build";
+penwidth="0.8";
+fillcolor="#E0FFE1";
+tooltip="package: go/build";
+fontsize="16";
+        
+        "go/build.Import" [ fillcolor="#adedad" label="Import" penwidth="1.5" tooltip="go/build.Import | defined in build.go:1468" ]
+        
+    }
+
+        subgraph "cluster_go/token" {
+        style="filled";
+fontsize="16";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+rank="sink";
+label="go/token";
+URL="/?f=go/token";
+tooltip="package: go/token";
+penwidth="0.8";
+        
+        "(*go/token.FileSet).Position" [ fillcolor="#adedad" label="(*FileSet).Position" penwidth="1.5" tooltip="(*go/token.FileSet).Position | defined in position.go:524" ]
+        
+    }
+
+        subgraph "cluster_go/types" {
+        penwidth="0.8";
+fontsize="16";
+fontname="Tahoma bold";
+rank="sink";
+style="filled";
+fillcolor="#E0FFE1";
+label="go/types";
+URL="/?f=go/types";
+tooltip="package: go/types";
+        
+        "(*go/types.Package).Path" [ tooltip="(*go/types.Package).Path | defined in package.go:31" fillcolor="#adedad" label="(*Package).Path" penwidth="1.5" ]
+        "(*go/types.Signature).Recv" [ fillcolor="#adedad" label="(*Signature).Recv" penwidth="1.5" tooltip="(*go/types.Signature).Recv | defined in signature.go:78" ]
+        "(*go/types.Package).Name" [ penwidth="1.5" tooltip="(*go/types.Package).Name | defined in package.go:34" fillcolor="#adedad" label="(*Package).Name" ]
+        "(*go/types.object).Type" [ tooltip="(*go/types.object).Type | defined in object.go:139" fillcolor="#adedad" label="(*object).Type" penwidth="1.5" ]
+        "(*go/types.object).Exported" [ fillcolor="#adedad" label="(*object).Exported" penwidth="1.5" tooltip="(*go/types.object).Exported | defined in object.go:144" ]
+        "(*go/types.Union).String" [ fillcolor="#adedad" label="(*Union).String" penwidth="1.5" tooltip="(*go/types.Union).String | defined in union.go:33" ]
+        "(*go/types.Signature).String" [ fillcolor="#adedad" label="(*Signature).String" penwidth="1.5" tooltip="(*go/types.Signature).String | defined in signature.go:96" ]
+        "(*go/types.Basic).String" [ fillcolor="#adedad" label="(*Basic).String" penwidth="1.5" tooltip="(*go/types.Basic).String | defined in basic.go:82" ]
+        "(*go/types.Tuple).String" [ tooltip="(*go/types.Tuple).String | defined in tuple.go:34" fillcolor="#adedad" label="(*Tuple).String" penwidth="1.5" ]
+        "(*go/types.Named).String" [ penwidth="1.5" tooltip="(*go/types.Named).String | defined in named.go:227" fillcolor="#adedad" label="(*Named).String" ]
+        "(*go/types.TypeParam).String" [ fillcolor="#adedad" label="(*TypeParam).String" penwidth="1.5" tooltip="(*go/types.TypeParam).String | defined in typeparam.go:95" ]
+        "(*go/types.Map).String" [ tooltip="(*go/types.Map).String | defined in map.go:24" fillcolor="#adedad" label="(*Map).String" penwidth="1.5" ]
+        "(*go/types.Interface).String" [ fillcolor="#adedad" label="(*Interface).String" penwidth="1.5" tooltip="(*go/types.Interface).String | defined in interface.go:148" ]
+        "(*go/types.Pointer).String" [ fillcolor="#adedad" label="(*Pointer).String" penwidth="1.5" tooltip="(*go/types.Pointer).String | defined in pointer.go:19" ]
+        "(*go/types.Slice).String" [ penwidth="1.5" tooltip="(*go/types.Slice).String | defined in slice.go:19" fillcolor="#adedad" label="(*Slice).String" ]
+        "(*go/types.Chan).String" [ tooltip="(*go/types.Chan).String | defined in chan.go:35" fillcolor="#adedad" label="(*Chan).String" penwidth="1.5" ]
+        "(*go/types.Struct).String" [ tooltip="(*go/types.Struct).String | defined in struct.go:56" fillcolor="#adedad" label="(*Struct).String" penwidth="1.5" ]
+        "(*go/types.Array).String" [ fillcolor="#adedad" label="(*Array).String" penwidth="1.5" tooltip="(*go/types.Array).String | defined in array.go:25" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/callgraph" {
+        label="callgraph";
+fontname="Tahoma bold";
+rank="sink";
+URL="/?f=golang.org/x/tools/go/callgraph";
+tooltip="package: golang.org/x/tools/go/callgraph";
+penwidth="0.8";
+fontsize="16";
+style="filled";
+fillcolor="lightyellow";
+        
+        "(*golang.org/x/tools/go/callgraph.Graph).DeleteSyntheticNodes" [ fillcolor="moccasin" label="(*Graph).DeleteSyntheticNodes" penwidth="1.5" tooltip="(*golang.org/x/tools/go/callgraph.Graph).DeleteSyntheticNodes | defined in util.go:86" ]
+        "(golang.org/x/tools/go/callgraph.Edge).Pos" [ fillcolor="moccasin" label="(Edge).Pos" penwidth="1.5" tooltip="(golang.org/x/tools/go/callgraph.Edge).Pos | defined in callgraph.go:116" ]
+        "(golang.org/x/tools/go/callgraph.Edge).Description" [ fillcolor="moccasin" label="(Edge).Description" penwidth="1.5" tooltip="(golang.org/x/tools/go/callgraph.Edge).Description | defined in callgraph.go:103" ]
+        "golang.org/x/tools/go/callgraph.GraphVisitEdges$1" [ tooltip="golang.org/x/tools/go/callgraph.GraphVisitEdges$1 | defined in util.go:31\nat util.go:38: calling [github.com/ofabry/go-callvis.printOutput$6]" fillcolor="moccasin" label="GraphVisitEdges$1" style="dotted,filled" ]
+        "golang.org/x/tools/go/callgraph.GraphVisitEdges" [ label="GraphVisitEdges" penwidth="1.5" tooltip="golang.org/x/tools/go/callgraph.GraphVisitEdges | defined in util.go:28\nat util.go:46: calling [golang.org/x/tools/go/callgraph.GraphVisitEdges$1]" fillcolor="moccasin" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/callgraph/cha" {
+        penwidth="0.8";
+label="cha";
+URL="/?f=golang.org/x/tools/go/callgraph/cha";
+tooltip="package: golang.org/x/tools/go/callgraph/cha";
+fontsize="16";
+style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+rank="sink";
+        
+        "golang.org/x/tools/go/callgraph/cha.CallGraph" [ fillcolor="moccasin" label="CallGraph" penwidth="1.5" tooltip="golang.org/x/tools/go/callgraph/cha.CallGraph | defined in cha.go:38" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/callgraph/rta" {
+        URL="/?f=golang.org/x/tools/go/callgraph/rta";
+tooltip="package: golang.org/x/tools/go/callgraph/rta";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+rank="sink";
+label="rta";
+penwidth="0.8";
+fontsize="16";
+style="filled";
+        
+        "golang.org/x/tools/go/callgraph/rta.Analyze" [ fillcolor="moccasin" label="Analyze" penwidth="1.5" tooltip="golang.org/x/tools/go/callgraph/rta.Analyze | defined in rta.go:266" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/callgraph/static" {
+        penwidth="0.8";
+style="filled";
+rank="sink";
+label="static";
+URL="/?f=golang.org/x/tools/go/callgraph/static";
+tooltip="package: golang.org/x/tools/go/callgraph/static";
+fontsize="16";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+        
+        "golang.org/x/tools/go/callgraph/static.CallGraph" [ penwidth="1.5" tooltip="golang.org/x/tools/go/callgraph/static.CallGraph | defined in static.go:18" fillcolor="moccasin" label="CallGraph" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/internal/gcimporter" {
+        label="gcimporter";
+penwidth="0.8";
+fontsize="16";
+fontname="Tahoma bold";
+rank="sink";
+style="filled";
+fillcolor="lightyellow";
+URL="/?f=golang.org/x/tools/go/internal/gcimporter";
+tooltip="package: golang.org/x/tools/go/internal/gcimporter";
+        
+        "(golang.org/x/tools/go/internal/gcimporter.anyType).String" [ fillcolor="moccasin" label="(anyType).String" penwidth="1.5" tooltip="(golang.org/x/tools/go/internal/gcimporter.anyType).String | defined in bimport.go:1053" ]
+        "(*golang.org/x/tools/go/internal/gcimporter.dddSlice).String" [ fillcolor="moccasin" label="(*dddSlice).String" penwidth="1.5" tooltip="(*golang.org/x/tools/go/internal/gcimporter.dddSlice).String | defined in bimport.go:410" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/packages" {
+        style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+penwidth="0.8";
+rank="sink";
+label="packages";
+URL="/?f=golang.org/x/tools/go/packages";
+tooltip="package: golang.org/x/tools/go/packages";
+fontsize="16";
+        
+        "golang.org/x/tools/go/packages.Load" [ fillcolor="moccasin" label="Load" penwidth="1.5" tooltip="golang.org/x/tools/go/packages.Load | defined in packages.go:239" ]
+        "golang.org/x/tools/go/packages.PrintErrors" [ tooltip="golang.org/x/tools/go/packages.PrintErrors | defined in visit.go:50" fillcolor="moccasin" label="PrintErrors" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/pointer" {
+        style="filled";
+fontname="Tahoma bold";
+label="pointer";
+tooltip="package: golang.org/x/tools/go/pointer";
+penwidth="0.8";
+fontsize="16";
+URL="/?f=golang.org/x/tools/go/pointer";
+fillcolor="lightyellow";
+rank="sink";
+        
+        "golang.org/x/tools/go/pointer.Analyze" [ fillcolor="moccasin" label="Analyze" penwidth="1.5" tooltip="golang.org/x/tools/go/pointer.Analyze | defined in analysis.go:219" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/ssa" {
+        penwidth="0.8";
+fontsize="16";
+style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+rank="sink";
+label="ssa";
+URL="/?f=golang.org/x/tools/go/ssa";
+tooltip="package: golang.org/x/tools/go/ssa";
+        
+        "(*golang.org/x/tools/go/ssa.Function).String" [ penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Function).String | defined in ssa.go:1443" fillcolor="moccasin" label="(*Function).String" ]
+        "(*golang.org/x/tools/go/ssa.Function).RelString" [ fillcolor="moccasin" label="(*Function).RelString" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Function).RelString | defined in func.go:473" ]
+        "(*golang.org/x/tools/go/ssa.Function).Parent" [ fillcolor="moccasin" label="(*Function).Parent" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Function).Parent | defined in ssa.go:1445" ]
+        "(*golang.org/x/tools/go/ssa.Function).Object" [ label="(*Function).Object" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Function).Object | defined in ssa.go:1442" fillcolor="moccasin" ]
+        "(*golang.org/x/tools/go/ssa.opaqueType).String" [ fillcolor="moccasin" label="(*opaqueType).String" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.opaqueType).String | defined in builder.go:47" ]
+        "(*golang.org/x/tools/go/ssa.Program).ImportedPackage" [ tooltip="(*golang.org/x/tools/go/ssa.Program).ImportedPackage | defined in create.go:268" fillcolor="moccasin" label="(*Program).ImportedPackage" penwidth="1.5" ]
+        "(*golang.org/x/tools/go/ssa.Function).Pos" [ fillcolor="moccasin" label="(*Function).Pos" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Function).Pos | defined in ssa.go:1440" ]
+        "(*golang.org/x/tools/go/ssa.CallCommon).StaticCallee" [ penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.CallCommon).StaticCallee | defined in ssa.go:1366" fillcolor="moccasin" label="(*CallCommon).StaticCallee" ]
+        "(*golang.org/x/tools/go/ssa.Defer).Common" [ fillcolor="moccasin" label="(*Defer).Common" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Defer).Common | defined in ssa.go:1407" ]
+        "(*golang.org/x/tools/go/ssa.Call).Common" [ fillcolor="moccasin" label="(*Call).Common" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Call).Common | defined in ssa.go:1406" ]
+        "(*golang.org/x/tools/go/ssa.Go).Common" [ tooltip="(*golang.org/x/tools/go/ssa.Go).Common | defined in ssa.go:1408" fillcolor="moccasin" label="(*Go).Common" penwidth="1.5" ]
+        "(*golang.org/x/tools/go/ssa.Package).Func" [ fillcolor="moccasin" label="(*Package).Func" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Package).Func | defined in ssa.go:1500" ]
+        "(*golang.org/x/tools/go/ssa.Program).Build" [ fillcolor="moccasin" label="(*Program).Build" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Program).Build | defined in builder.go:2245" ]
+        "(*golang.org/x/tools/go/ssa.Program).AllPackages" [ fillcolor="moccasin" label="(*Program).AllPackages" penwidth="1.5" tooltip="(*golang.org/x/tools/go/ssa.Program).AllPackages | defined in create.go:246" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/go/ssa/ssautil" {
+        fillcolor="lightyellow";
+tooltip="package: golang.org/x/tools/go/ssa/ssautil";
+fontsize="16";
+style="filled";
+fontname="Tahoma bold";
+rank="sink";
+label="ssautil";
+URL="/?f=golang.org/x/tools/go/ssa/ssautil";
+penwidth="0.8";
+        
+        "golang.org/x/tools/go/ssa/ssautil.AllPackages" [ penwidth="1.5" tooltip="golang.org/x/tools/go/ssa/ssautil.AllPackages | defined in load.go:59" fillcolor="moccasin" label="AllPackages" ]
+        
+    }
+
+        subgraph "cluster_io" {
+        fontsize="16";
+style="filled";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+URL="/?f=io";
+penwidth="0.8";
+rank="sink";
+label="io";
+tooltip="package: io";
+        
+        "io.Copy" [ tooltip="io.Copy | defined in io.go:384" fillcolor="#adedad" label="Copy" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_io/fs" {
+        fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+rank="sink";
+label="io/fs";
+penwidth="0.8";
+fontsize="16";
+style="filled";
+URL="/?f=io/fs";
+tooltip="package: io/fs";
+        
+        "(io/fs.FileMode).IsRegular" [ penwidth="1.5" tooltip="(io/fs.FileMode).IsRegular | defined in fs.go:228" fillcolor="#adedad" label="(FileMode).IsRegular" ]
+        
+    }
+
+        subgraph "cluster_io/ioutil" {
+        style="filled";
+URL="/?f=io/ioutil";
+tooltip="package: io/ioutil";
+penwidth="0.8";
+fontsize="16";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+rank="sink";
+label="io/ioutil";
+        
+        "io/ioutil.WriteFile" [ fillcolor="#adedad" label="WriteFile" penwidth="1.5" tooltip="io/ioutil.WriteFile | defined in ioutil.go:45" ]
+        
+    }
+
+        subgraph "cluster_log" {
+        fontsize="16";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+rank="sink";
+label="log";
+URL="/?f=log";
+penwidth="0.8";
+style="filled";
+tooltip="package: log";
+        
+        "log.Fatalf" [ fillcolor="#adedad" label="Fatalf" penwidth="1.5" tooltip="log.Fatalf | defined in log.go:370" ]
+        "log.Printf" [ label="Printf" penwidth="1.5" tooltip="log.Printf | defined in log.go:347" fillcolor="#adedad" ]
+        "log.Println" [ fillcolor="#adedad" label="Println" penwidth="1.5" tooltip="log.Println | defined in log.go:356" ]
+        "log.SetFlags" [ label="SetFlags" penwidth="1.5" tooltip="log.SetFlags | defined in log.go:315" fillcolor="#adedad" ]
+        "log.Fatal" [ fillcolor="#adedad" label="Fatal" penwidth="1.5" tooltip="log.Fatal | defined in log.go:364" ]
+        
+    }
+
+        subgraph "cluster_net/http" {
+        penwidth="0.8";
+fontname="Tahoma bold";
+URL="/?f=net/http";
+tooltip="package: net/http";
+fontsize="16";
+style="filled";
+fillcolor="#E0FFE1";
+rank="sink";
+label="net/http";
+        
+        "(*net/http.Request).FormValue" [ fillcolor="#adedad" label="(*Request).FormValue" penwidth="1.5" tooltip="(*net/http.Request).FormValue | defined in request.go:1344" ]
+        
+    }
+
+        subgraph "cluster_os" {
+        fillcolor="#E0FFE1";
+rank="sink";
+URL="/?f=os";
+penwidth="0.8";
+style="filled";
+fontname="Tahoma bold";
+label="os";
+tooltip="package: os";
+fontsize="16";
+        
+        "os.Stat" [ tooltip="os.Stat | defined in stat.go:11" fillcolor="#adedad" label="Stat" penwidth="1.5" ]
+        "os.IsNotExist" [ fillcolor="#adedad" label="IsNotExist" penwidth="1.5" tooltip="os.IsNotExist | defined in error.go:92" ]
+        "os.Exit" [ penwidth="1.5" tooltip="os.Exit | defined in proc.go:62" fillcolor="#adedad" label="Exit" ]
+        "os.MkdirAll" [ fillcolor="#adedad" label="MkdirAll" penwidth="1.5" tooltip="os.MkdirAll | defined in path.go:18" ]
+        "os.Open" [ fillcolor="#adedad" label="Open" penwidth="1.5" tooltip="os.Open | defined in file.go:317" ]
+        "(*os.File).Close" [ label="(*File).Close" penwidth="1.5" tooltip="(*os.File).Close | defined in file_posix.go:21" fillcolor="#adedad" ]
+        "os.Create" [ fillcolor="#adedad" label="Create" penwidth="1.5" tooltip="os.Create | defined in file.go:326" ]
+        "(*os.fileStat).Mode" [ tooltip="(*os.fileStat).Mode | defined in types_unix.go:24" fillcolor="#adedad" label="(*fileStat).Mode" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_path/filepath" {
+        fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+tooltip="package: path/filepath";
+fontsize="16";
+style="filled";
+label="path/filepath";
+URL="/?f=path/filepath";
+penwidth="0.8";
+rank="sink";
+        
+        "path/filepath.Base" [ fillcolor="#adedad" label="Base" penwidth="1.5" tooltip="path/filepath.Base | defined in path.go:561" ]
+        "path/filepath.Join" [ tooltip="path/filepath.Join | defined in path.go:224" fillcolor="#adedad" label="Join" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_strings" {
+        penwidth="0.8";
+rank="sink";
+label="strings";
+URL="/?f=strings";
+tooltip="package: strings";
+fontsize="16";
+style="filled";
+fillcolor="#E0FFE1";
+fontname="Tahoma bold";
+        
+        "strings.lastIndexFunc" [ fillcolor="#adedad" label="lastIndexFunc" penwidth="0.5" tooltip="strings.lastIndexFunc | defined in strings.go:788\nat strings.go:792: calling [(*github.com/ofabry/go-callvis.analysis).CacheImg$1]" ]
+        "strings.TrimRightFunc" [ fillcolor="#adedad" label="TrimRightFunc" penwidth="1.5" tooltip="strings.TrimRightFunc | defined in strings.go:744\nat strings.go:745: calling [strings.lastIndexFunc]" ]
+        "strings.Split" [ fillcolor="#adedad" label="Split" penwidth="1.5" tooltip="strings.Split | defined in strings.go:303" ]
+        "strings.HasPrefix" [ penwidth="1.5" tooltip="strings.HasPrefix | defined in strings.go:448" fillcolor="#adedad" label="HasPrefix" ]
+        "strings.TrimSpace" [ fillcolor="#adedad" label="TrimSpace" penwidth="1.5" tooltip="strings.TrimSpace | defined in strings.go:940" ]
+        "strings.Contains" [ fillcolor="#adedad" label="Contains" penwidth="1.5" tooltip="strings.Contains | defined in strings.go:61" ]
+        "strings.Join" [ fillcolor="#adedad" label="Join" penwidth="1.5" tooltip="strings.Join | defined in strings.go:425" ]
+        
+    }
+
+        subgraph "cluster_text/template" {
+        penwidth="0.8";
+fontsize="16";
+style="filled";
+fontname="Tahoma bold";
+label="text/template";
+fillcolor="#E0FFE1";
+rank="sink";
+URL="/?f=text/template";
+tooltip="package: text/template";
+        
+        "text/template.New" [ penwidth="1.5" tooltip="text/template.New | defined in template.go:38" fillcolor="#adedad" label="New" ]
+        "(*text/template.Template).Parse" [ fillcolor="#adedad" label="(*Template).Parse" penwidth="1.5" tooltip="(*text/template.Template).Parse | defined in template.go:207" ]
+        "(*text/template.Template).Execute" [ fillcolor="#adedad" label="(*Template).Execute" penwidth="1.5" tooltip="(*text/template.Template).Execute | defined in exec.go:200" ]
+        
+    }
+
+    }
+
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Interface).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Interface).String]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" [ tooltip="at main.go:96: calling [(*github.com/ofabry/go-callvis.analysis).ProcessListArgs]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*go/token.FileSet).Position" [ color="saddlebrown" tooltip="at output.go:149: calling [(*go/token.FileSet).Position]\nat output.go:150: calling [(*go/token.FileSet).Position]\nat output.go:151: calling [(*go/token.FileSet).Position]" ]
+    "github.com/ofabry/go-callvis.main" -> "flag.NArg" [ color="saddlebrown" tooltip="at main.go:133: calling [flag.NArg]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/ssa/ssautil.AllPackages" [ color="saddlebrown" tooltip="at analysis.go:97: calling [golang.org/x/tools/go/ssa/ssautil.AllPackages]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/callgraph/rta.Analyze" [ color="saddlebrown" tooltip="at analysis.go:118: calling [golang.org/x/tools/go/callgraph/rta.Analyze]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.Function).Pos" [ color="saddlebrown" tooltip="at output.go:149: calling [(*golang.org/x/tools/go/ssa.Function).Pos]\nat output.go:150: calling [(*golang.org/x/tools/go/ssa.Function).Pos]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]\nat output.go:370: calling [(*go/types.Package).Path]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Signature).Recv" [ color="saddlebrown" tooltip="at output.go:242: calling [(*go/types.Signature).Recv]\nat output.go:308: calling [(*go/types.Signature).Recv]\nat output.go:306: calling [(*go/types.Signature).Recv]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "strings.Contains" [ color="saddlebrown" tooltip="at analysis.go:248: calling [strings.Contains]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "fmt.Errorf" [ tooltip="at analysis.go:93: calling [fmt.Errorf]\nat analysis.go:135: calling [fmt.Errorf]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$1" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:77: calling [(*go/types.Package).Path]\nat output.go:84: calling [(*go/types.Package).Path]\nat output.go:84: calling [(*go/types.Package).Path]\nat output.go:91: calling [(*go/types.Package).Path]\nat output.go:91: calling [(*go/types.Package).Path]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.Call).Common" [ tooltip="at output.go:356: calling [(*golang.org/x/tools/go/ssa.Call).Common]" style="dashed" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at output.go:413: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "os.Open" [ color="saddlebrown" tooltip="at analysis.go:364: calling [os.Open]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/ssa.Function).RelString" [ color="saddlebrown" tooltip="at output.go:233: calling [(*golang.org/x/tools/go/ssa.Function).RelString]\nat output.go:307: calling [(*golang.org/x/tools/go/ssa.Function).RelString]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).Render" [ tooltip="at main.go:100: calling [(*github.com/ofabry/go-callvis.analysis).Render]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.Version" [ tooltip="at main.go:126: calling [github.com/ofabry/go-callvis.Version]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/callgraph/static.CallGraph" [ color="saddlebrown" tooltip="at analysis.go:105: calling [golang.org/x/tools/go/callgraph/static.CallGraph]" ]
+    "github.com/ofabry/go-callvis.pathExists" -> "os.IsNotExist" [ color="saddlebrown" tooltip="at analysis.go:347: calling [os.IsNotExist]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/ssa.Function).Object" [ color="saddlebrown" tooltip="at output.go:267: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:267: calling [(*golang.org/x/tools/go/ssa.Function).Object]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Array).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Array).String]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.isSynthetic" [ tooltip="at output.go:156: calling [github.com/ofabry/go-callvis.isSynthetic]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.CallCommon).StaticCallee" [ color="saddlebrown" tooltip="at output.go:356: calling [(*golang.org/x/tools/go/ssa.CallCommon).StaticCallee]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.Function).String" [ color="saddlebrown" tooltip="at output.go:379: calling [(*golang.org/x/tools/go/ssa.Function).String]" ]
+    "github.com/ofabry/go-callvis.logf" -> "log.Printf" [ color="saddlebrown" tooltip="at main.go:66: calling [log.Printf]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "fmt.Fprintf" [ color="saddlebrown" tooltip="at analysis.go:262: calling [fmt.Fprintf]" ]
+    "github.com/ofabry/go-callvis.mainPackages" -> "fmt.Errorf" [ color="saddlebrown" tooltip="at analysis.go:58: calling [fmt.Errorf]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "(*golang.org/x/tools/go/ssa.Package).Func" [ color="saddlebrown" tooltip="at analysis.go:116: calling [(*golang.org/x/tools/go/ssa.Package).Func]" ]
+    "github.com/ofabry/go-callvis.init#1" -> "flag.Float64Var" [ color="saddlebrown" tooltip="at main.go:58: calling [flag.Float64Var]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "path/filepath.Base" [ color="saddlebrown" tooltip="at output.go:153: calling [path/filepath.Base]\nat output.go:377: calling [path/filepath.Base]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "fmt.Sprintf" [ tooltip="at output.go:375: calling [fmt.Sprintf]\nat output.go:383: calling [fmt.Sprintf]\nat output.go:397: calling [fmt.Sprintf]" color="saddlebrown" ]
+    "golang.org/x/tools/go/callgraph.GraphVisitEdges" -> "golang.org/x/tools/go/callgraph.GraphVisitEdges$1" [ style="dashed" color="saddlebrown" tooltip="at util.go:46: calling [golang.org/x/tools/go/callgraph.GraphVisitEdges$1]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" [ tooltip="at output.go:443: calling [(*github.com/ofabry/go-callvis.dotGraph).WriteDot]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at main.go:107: calling [fmt.Sprintf]" ]
+    "(*github.com/ofabry/go-callvis.analysis).CacheImg" -> "path/filepath.Join" [ color="saddlebrown" tooltip="at analysis.go:324: calling [path/filepath.Join]" ]
+    "github.com/ofabry/go-callvis.printOutput$5" -> "(*golang.org/x/tools/go/ssa.Function).Object" [ color="saddlebrown" tooltip="at output.go:136: calling [(*golang.org/x/tools/go/ssa.Function).Object]\nat output.go:136: calling [(*golang.org/x/tools/go/ssa.Function).Object]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "(*go/types.Package).Name" [ color="saddlebrown" tooltip="at analysis.go:254: calling [(*go/types.Package).Name]" ]
+    "github.com/ofabry/go-callvis.init#1" -> "flag.StringVar" [ color="saddlebrown" tooltip="at main.go:59: calling [flag.StringVar]\nat main.go:60: calling [flag.StringVar]\nat main.go:61: calling [flag.StringVar]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "path/filepath.Base" [ color="saddlebrown" tooltip="at output.go:214: calling [path/filepath.Base]\nat output.go:215: calling [path/filepath.Base]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "strings.Split" [ color="saddlebrown" tooltip="at output.go:243: calling [strings.Split]\nat output.go:307: calling [strings.Split]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Map).String" [ tooltip="at output.go:308: calling [(*go/types.Map).String]" style="dashed" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Slice).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Slice).String]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:184: calling [github.com/ofabry/go-callvis.logf]\nat output.go:207: calling [github.com/ofabry/go-callvis.logf]\nat output.go:192: calling [github.com/ofabry/go-callvis.logf]\nat output.go:199: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.main" -> "fmt.Fprintln" [ tooltip="at main.go:126: calling [fmt.Fprintln]" color="saddlebrown" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/callgraph/cha.CallGraph" [ color="saddlebrown" tooltip="at analysis.go:107: calling [golang.org/x/tools/go/callgraph/cha.CallGraph]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).String" -> "(github.com/ofabry/go-callvis.dotAttrs).List" [ tooltip="at dot.go:115: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).String" -> "strings.Join" [ color="saddlebrown" tooltip="at dot.go:115: calling [strings.Join]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:229: calling [(*go/types.Package).Path]\nat output.go:229: calling [(*go/types.Package).Path]\nat output.go:247: calling [(*go/types.Package).Path]\nat output.go:279: calling [(*go/types.Package).Path]\nat output.go:281: calling [(*go/types.Package).Path]" ]
+    "github.com/ofabry/go-callvis.mainPackages" -> "(*golang.org/x/tools/go/ssa.Package).Func" [ color="saddlebrown" tooltip="at analysis.go:53: calling [(*golang.org/x/tools/go/ssa.Package).Func]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "os.Stat" [ color="saddlebrown" tooltip="at analysis.go:354: calling [os.Stat]" ]
+    "(*github.com/ofabry/go-callvis.analysis).CacheImg" -> "github.com/ofabry/go-callvis.copyFile" [ tooltip="at analysis.go:334: calling [github.com/ofabry/go-callvis.copyFile]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).Lines" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at dot.go:119: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*golang.org/x/tools/go/callgraph.Graph).DeleteSyntheticNodes" [ color="saddlebrown" tooltip="at output.go:67: calling [(*golang.org/x/tools/go/callgraph.Graph).DeleteSyntheticNodes]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$1" [ style="dashed" tooltip="at output.go:165: calling [github.com/ofabry/go-callvis.printOutput$1]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/internal/gcimporter.dddSlice).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*golang.org/x/tools/go/internal/gcimporter.dddSlice).String]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.inStd" [ tooltip="at output.go:171: calling [github.com/ofabry/go-callvis.inStd]\nat output.go:171: calling [github.com/ofabry/go-callvis.inStd]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$6$1" [ tooltip="at output.go:349: calling [github.com/ofabry/go-callvis.printOutput$6$1]\nat output.go:350: calling [github.com/ofabry/go-callvis.printOutput$6$1]" ]
+    "github.com/ofabry/go-callvis.main" -> "log.SetFlags" [ color="saddlebrown" tooltip="at main.go:130: calling [log.SetFlags]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/packages.PrintErrors" [ color="saddlebrown" tooltip="at analysis.go:92: calling [golang.org/x/tools/go/packages.PrintErrors]" ]
+    "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" -> "errors.New" [ color="saddlebrown" tooltip="at analysis.go:172: calling [errors.New]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at analysis.go:272: calling [github.com/ofabry/go-callvis.logf]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "io/ioutil.WriteFile" [ tooltip="at main.go:107: calling [io/ioutil.WriteFile]" color="saddlebrown" ]
+    "(*github.com/ofabry/go-callvis.analysis).CacheImg" -> "os.MkdirAll" [ color="saddlebrown" tooltip="at analysis.go:328: calling [os.MkdirAll]" ]
+    "github.com/ofabry/go-callvis.main" -> "flag.Parse" [ color="saddlebrown" tooltip="at main.go:123: calling [flag.Parse]" ]
+    "strings.TrimRightFunc" -> "strings.lastIndexFunc" [ color="saddlebrown" tooltip="at strings.go:745: calling [strings.lastIndexFunc]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Named).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Named).String]" ]
+    "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" -> "strings.Split" [ color="saddlebrown" tooltip="at analysis.go:166: calling [strings.Split]\nat analysis.go:178: calling [strings.Split]\nat analysis.go:185: calling [strings.Split]\nat analysis.go:192: calling [strings.Split]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(golang.org/x/tools/go/callgraph.Edge).Description" [ color="saddlebrown" tooltip="at output.go:383: calling [(golang.org/x/tools/go/callgraph.Edge).Description]" ]
+    "github.com/ofabry/go-callvis.printOutput$5" -> "(*go/types.object).Exported" [ style="dashed" color="saddlebrown" tooltip="at output.go:136: calling [(*go/types.object).Exported]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.Defer).Common" [ style="dashed" color="saddlebrown" tooltip="at output.go:356: calling [(*golang.org/x/tools/go/ssa.Defer).Common]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.object).Exported" [ style="dashed" color="saddlebrown" tooltip="at output.go:267: calling [(*go/types.object).Exported]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$2" [ style="dashed" tooltip="at output.go:183: calling [github.com/ofabry/go-callvis.printOutput$2]\nat output.go:183: calling [github.com/ofabry/go-callvis.printOutput$2]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$4" [ style="dashed" tooltip="at output.go:198: calling [github.com/ofabry/go-callvis.printOutput$4]\nat output.go:198: calling [github.com/ofabry/go-callvis.printOutput$4]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "os.Create" [ color="saddlebrown" tooltip="at analysis.go:370: calling [os.Create]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "log.Fatalf" [ color="saddlebrown" tooltip="at main.go:97: calling [log.Fatalf]\nat main.go:102: calling [log.Fatalf]\nat main.go:109: calling [log.Fatalf]" ]
+    "github.com/ofabry/go-callvis.printOutput$2" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:104: calling [(*go/types.Package).Path]" ]
+    "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" -> "(*bytes.Buffer).WriteTo" [ tooltip="at dot.go:144: calling [(*bytes.Buffer).WriteTo]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.init" -> "flag.String" [ color="saddlebrown" tooltip="at main.go:33: calling [flag.String]\nat main.go:34: calling [flag.String]\nat main.go:35: calling [flag.String]\nat main.go:36: calling [flag.String]\nat main.go:37: calling [flag.String]\nat main.go:42: calling [flag.String]\nat main.go:44: calling [flag.String]\nat main.go:45: calling [flag.String]\nat main.go:46: calling [flag.String]\nat main.go:47: calling [flag.String]" ]
+    "github.com/ofabry/go-callvis.init#1" -> "flag.UintVar" [ tooltip="at main.go:57: calling [flag.UintVar]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/ssa.opaqueType).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*golang.org/x/tools/go/ssa.opaqueType).String]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(golang.org/x/tools/go/internal/gcimporter.anyType).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(golang.org/x/tools/go/internal/gcimporter.anyType).String]" ]
+    "github.com/ofabry/go-callvis.inStd" -> "(*go/types.Package).Path" [ tooltip="at output.go:20: calling [(*go/types.Package).Path]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$2" -> "strings.HasPrefix" [ color="saddlebrown" tooltip="at output.go:106: calling [strings.HasPrefix]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$3" [ tooltip="at output.go:191: calling [github.com/ofabry/go-callvis.printOutput$3]\nat output.go:191: calling [github.com/ofabry/go-callvis.printOutput$3]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*bytes.Buffer).Bytes" [ color="saddlebrown" tooltip="at output.go:447: calling [(*bytes.Buffer).Bytes]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "fmt.Errorf" [ color="saddlebrown" tooltip="at analysis.go:249: calling [fmt.Errorf]\nat analysis.go:259: calling [fmt.Errorf]\nat analysis.go:264: calling [fmt.Errorf]\nat analysis.go:268: calling [fmt.Errorf]\nat analysis.go:288: calling [fmt.Errorf]" ]
+    "github.com/ofabry/go-callvis.main" -> "os.Exit" [ color="saddlebrown" tooltip="at main.go:127: calling [os.Exit]\nat main.go:136: calling [os.Exit]" ]
+    "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" -> "github.com/ofabry/go-callvis.pathExists" [ tooltip="at analysis.go:306: calling [github.com/ofabry/go-callvis.pathExists]" ]
+    "strings.lastIndexFunc" -> "(*github.com/ofabry/go-callvis.analysis).CacheImg$1" [ style="dashed" color="saddlebrown" tooltip="at strings.go:792: calling [(*github.com/ofabry/go-callvis.analysis).CacheImg$1]" ]
+    "(*github.com/ofabry/go-callvis.analysis).ProcessListArgs" -> "strings.TrimSpace" [ color="saddlebrown" tooltip="at analysis.go:167: calling [strings.TrimSpace]\nat analysis.go:179: calling [strings.TrimSpace]\nat analysis.go:186: calling [strings.TrimSpace]\nat analysis.go:193: calling [strings.TrimSpace]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "fmt.Sprint" [ color="saddlebrown" tooltip="at output.go:434: calling [fmt.Sprint]\nat output.go:435: calling [fmt.Sprint]\nat output.go:436: calling [fmt.Sprint]\nat output.go:437: calling [fmt.Sprint]\nat output.go:438: calling [fmt.Sprint]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "(*golang.org/x/tools/go/ssa.Program).AllPackages" [ color="saddlebrown" tooltip="at analysis.go:109: calling [(*golang.org/x/tools/go/ssa.Program).AllPackages]\nat analysis.go:120: calling [(*golang.org/x/tools/go/ssa.Program).AllPackages]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "github.com/ofabry/go-callvis.mainPackages" [ tooltip="at analysis.go:109: calling [github.com/ofabry/go-callvis.mainPackages]\nat analysis.go:120: calling [github.com/ofabry/go-callvis.mainPackages]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Package).Name" [ color="saddlebrown" tooltip="at output.go:259: calling [(*go/types.Package).Name]\nat output.go:277: calling [(*go/types.Package).Name]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Pointer).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Pointer).String]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(golang.org/x/tools/go/callgraph.Edge).Pos" [ color="saddlebrown" tooltip="at output.go:151: calling [(golang.org/x/tools/go/callgraph.Edge).Pos]" ]
+    "github.com/ofabry/go-callvis.Version" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at version.go:13: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "(*os.File).Close" [ arrowhead="normalnoneodiamond" color="saddlebrown" tooltip="at analysis.go:368: calling [(*os.File).Close]\nat analysis.go:374: calling [(*os.File).Close]" ]
+    "github.com/ofabry/go-callvis.printOutput$4" -> "strings.HasPrefix" [ color="saddlebrown" tooltip="at output.go:126: calling [strings.HasPrefix]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "golang.org/x/tools/go/callgraph.GraphVisitEdges" [ tooltip="at output.go:143: calling [golang.org/x/tools/go/callgraph.GraphVisitEdges]" color="saddlebrown" ]
+    "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" -> "(*text/template.Template).Execute" [ color="saddlebrown" tooltip="at dot.go:141: calling [(*text/template.Template).Execute]" ]
+    "github.com/ofabry/go-callvis.mainPackages" -> "(*go/types.Package).Name" [ color="saddlebrown" tooltip="at analysis.go:53: calling [(*go/types.Package).Name]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "(io/fs.FileMode).IsRegular" [ color="saddlebrown" tooltip="at analysis.go:360: calling [(io/fs.FileMode).IsRegular]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "(*os.fileStat).Mode" [ tooltip="at analysis.go:360: calling [(*os.fileStat).Mode]" style="dashed" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.init" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at main.go:47: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Basic).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Basic).String]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Tuple).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Tuple).String]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:69: calling [github.com/ofabry/go-callvis.logf]\nat output.go:70: calling [github.com/ofabry/go-callvis.logf]\nat output.go:71: calling [github.com/ofabry/go-callvis.logf]\nat output.go:72: calling [github.com/ofabry/go-callvis.logf]\nat output.go:421: calling [github.com/ofabry/go-callvis.logf]" ]
+    "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" -> "text/template.New" [ color="saddlebrown" tooltip="at dot.go:134: calling [text/template.New]" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "log.Println" [ color="saddlebrown" tooltip="at main.go:105: calling [log.Println]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).Lines" -> "strings.Join" [ tooltip="at dot.go:119: calling [strings.Join]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at output.go:214: calling [fmt.Sprintf]\nat output.go:215: calling [fmt.Sprintf]\nat output.go:218: calling [fmt.Sprintf]\nat output.go:220: calling [fmt.Sprintf]\nat output.go:259: calling [fmt.Sprintf]\nat output.go:292: calling [fmt.Sprintf]\nat output.go:294: calling [fmt.Sprintf]\nat output.go:321: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.printOutput$4" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:124: calling [(*go/types.Package).Path]" ]
+    "(*github.com/ofabry/go-callvis.dotGraph).WriteDot" -> "(*text/template.Template).Parse" [ color="saddlebrown" tooltip="at dot.go:136: calling [(*text/template.Template).Parse]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "github.com/ofabry/go-callvis.printOutput" [ tooltip="at analysis.go:275: calling [github.com/ofabry/go-callvis.printOutput]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).List" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at dot.go:109: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "(*golang.org/x/tools/go/ssa.Go).Common" [ style="dashed" color="saddlebrown" tooltip="at output.go:356: calling [(*golang.org/x/tools/go/ssa.Go).Common]" ]
+    "github.com/ofabry/go-callvis.main" -> "fmt.Fprint" [ tooltip="at main.go:134: calling [fmt.Fprint]" color="saddlebrown" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/packages.Load" [ color="saddlebrown" tooltip="at analysis.go:87: calling [golang.org/x/tools/go/packages.Load]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "(*golang.org/x/tools/go/ssa.Program).Build" [ color="saddlebrown" tooltip="at analysis.go:98: calling [(*golang.org/x/tools/go/ssa.Program).Build]" ]
+    "(*github.com/ofabry/go-callvis.analysis).CacheImg" -> "strings.TrimRightFunc" [ color="saddlebrown" tooltip="at analysis.go:325: calling [strings.TrimRightFunc]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "io.Copy" [ color="saddlebrown" tooltip="at analysis.go:375: calling [io.Copy]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/ssa.Function).String" [ color="saddlebrown" tooltip="at output.go:211: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:218: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:220: calling [(*golang.org/x/tools/go/ssa.Function).String]\nat output.go:336: calling [(*golang.org/x/tools/go/ssa.Function).String]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.object).Type" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.object).Type]" ]
+    "github.com/ofabry/go-callvis.printOutput$3" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at output.go:114: calling [(*go/types.Package).Path]" ]
+    "golang.org/x/tools/go/callgraph.GraphVisitEdges$1" -> "github.com/ofabry/go-callvis.printOutput$6" [ color="saddlebrown" tooltip="at util.go:38: calling [github.com/ofabry/go-callvis.printOutput$6]" style="dashed" ]
+    "github.com/ofabry/go-callvis.init#1" -> "flag.Var" [ color="saddlebrown" tooltip="at main.go:55: calling [flag.Var]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Struct).String" [ tooltip="at output.go:308: calling [(*go/types.Struct).String]" style="dashed" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "fmt.Print" [ color="saddlebrown" tooltip="at main.go:112: calling [fmt.Print]" ]
+    "github.com/ofabry/go-callvis.copyFile" -> "fmt.Errorf" [ color="saddlebrown" tooltip="at analysis.go:361: calling [fmt.Errorf]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "go/build.Import" [ color="saddlebrown" tooltip="at output.go:247: calling [go/build.Import]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Signature).String" [ style="dashed" color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Signature).String]" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "(*go/types.Package).Path" [ color="saddlebrown" tooltip="at analysis.go:272: calling [(*go/types.Package).Path]\nat analysis.go:255: calling [(*go/types.Package).Path]" ]
+    "github.com/ofabry/go-callvis.main" -> "flag.Args" [ color="saddlebrown" tooltip="at main.go:139: calling [flag.Args]" ]
+    "(*github.com/ofabry/go-callvis.analysis).OverrideByHTTP" -> "(*net/http.Request).FormValue" [ color="saddlebrown" tooltip="at analysis.go:208: calling [(*net/http.Request).FormValue]\nat analysis.go:213: calling [(*net/http.Request).FormValue]\nat analysis.go:216: calling [(*net/http.Request).FormValue]\nat analysis.go:219: calling [(*net/http.Request).FormValue]\nat analysis.go:222: calling [(*net/http.Request).FormValue]\nat analysis.go:225: calling [(*net/http.Request).FormValue]\nat analysis.go:228: calling [(*net/http.Request).FormValue]\nat analysis.go:231: calling [(*net/http.Request).FormValue]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.TypeParam).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.TypeParam).String]" style="dashed" ]
+    "(*github.com/ofabry/go-callvis.analysis).Render" -> "(*golang.org/x/tools/go/ssa.Program).ImportedPackage" [ color="saddlebrown" tooltip="at analysis.go:247: calling [(*golang.org/x/tools/go/ssa.Program).ImportedPackage]\nat analysis.go:267: calling [(*golang.org/x/tools/go/ssa.Program).ImportedPackage]" ]
+    "github.com/ofabry/go-callvis.main" -> "flag.PrintDefaults" [ color="saddlebrown" tooltip="at main.go:135: calling [flag.PrintDefaults]" ]
+    "github.com/ofabry/go-callvis.main" -> "log.Fatal" [ color="saddlebrown" tooltip="at main.go:146: calling [log.Fatal]" ]
+    "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" -> "log.Println" [ color="saddlebrown" tooltip="at analysis.go:307: calling [log.Println]\nat analysis.go:311: calling [log.Println]" ]
+    "(*github.com/ofabry/go-callvis.dotCluster).String" -> "fmt.Sprintf" [ color="saddlebrown" tooltip="at dot.go:83: calling [fmt.Sprintf]" ]
+    "github.com/ofabry/go-callvis.init" -> "github.com/ofabry/go-callvis.init#1" [ tooltip="at .:0: calling [github.com/ofabry/go-callvis.init#1]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Union).String" [ tooltip="at output.go:308: calling [(*go/types.Union).String]" style="dashed" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.outputDot" -> "(*github.com/ofabry/go-callvis.analysis).OptsSetup" [ tooltip="at main.go:94: calling [(*github.com/ofabry/go-callvis.analysis).OptsSetup]" ]
+    "github.com/ofabry/go-callvis.printOutput$1" -> "github.com/ofabry/go-callvis.isSynthetic" [ tooltip="at output.go:83: calling [github.com/ofabry/go-callvis.isSynthetic]\nat output.go:90: calling [github.com/ofabry/go-callvis.isSynthetic]" ]
+    "github.com/ofabry/go-callvis.printOutput$6" -> "github.com/ofabry/go-callvis.printOutput$5" [ style="dashed" tooltip="at output.go:176: calling [github.com/ofabry/go-callvis.printOutput$5]" ]
+    "github.com/ofabry/go-callvis.main" -> "github.com/ofabry/go-callvis.outputDot" [ tooltip="at main.go:150: calling [github.com/ofabry/go-callvis.outputDot]" ]
+    "github.com/ofabry/go-callvis.pathExists" -> "os.Stat" [ tooltip="at analysis.go:343: calling [os.Stat]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*go/types.Chan).String" [ color="saddlebrown" tooltip="at output.go:308: calling [(*go/types.Chan).String]" style="dashed" ]
+    "github.com/ofabry/go-callvis.printOutput$3" -> "strings.HasPrefix" [ color="saddlebrown" tooltip="at output.go:116: calling [strings.HasPrefix]" ]
+    "github.com/ofabry/go-callvis.inStd" -> "go/build.Import" [ color="saddlebrown" tooltip="at output.go:20: calling [go/build.Import]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*go/types.Package).Path" [ tooltip="at output.go:425: calling [(*go/types.Package).Path]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.main" -> "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" [ tooltip="at main.go:145: calling [(*github.com/ofabry/go-callvis.analysis).DoAnalysis]" ]
+    "github.com/ofabry/go-callvis.printOutput$6$1" -> "(*golang.org/x/tools/go/ssa.Function).Parent" [ color="saddlebrown" tooltip="at output.go:237: calling [(*golang.org/x/tools/go/ssa.Function).Parent]\nat output.go:238: calling [(*golang.org/x/tools/go/ssa.Function).Parent]\nat output.go:265: calling [(*golang.org/x/tools/go/ssa.Function).Parent]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "github.com/ofabry/go-callvis.NewDotCluster" [ tooltip="at output.go:46: calling [github.com/ofabry/go-callvis.NewDotCluster]" ]
+    "github.com/ofabry/go-callvis.printOutput" -> "(*go/types.Package).Name" [ color="saddlebrown" tooltip="at output.go:56: calling [(*go/types.Package).Name]" ]
+    "github.com/ofabry/go-callvis.printOutput$1" -> "github.com/ofabry/go-callvis.logf" [ tooltip="at output.go:97: calling [github.com/ofabry/go-callvis.logf]" ]
+    "(*github.com/ofabry/go-callvis.analysis).DoAnalysis" -> "golang.org/x/tools/go/pointer.Analyze" [ tooltip="at analysis.go:129: calling [golang.org/x/tools/go/pointer.Analyze]" color="saddlebrown" ]
+    "github.com/ofabry/go-callvis.init" -> "flag.Bool" [ color="saddlebrown" tooltip="at main.go:38: calling [flag.Bool]\nat main.go:39: calling [flag.Bool]\nat main.go:40: calling [flag.Bool]\nat main.go:41: calling [flag.Bool]\nat main.go:43: calling [flag.Bool]\nat main.go:50: calling [flag.Bool]\nat main.go:51: calling [flag.Bool]" ]
+    "(*github.com/ofabry/go-callvis.analysis).FindCachedImg" -> "path/filepath.Join" [ color="saddlebrown" tooltip="at analysis.go:304: calling [path/filepath.Join]" ]
+    "(github.com/ofabry/go-callvis.dotAttrs).Lines" -> "(github.com/ofabry/go-callvis.dotAttrs).List" [ tooltip="at dot.go:119: calling [(github.com/ofabry/go-callvis.dotAttrs).List]" ]
+}

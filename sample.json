@@ -1,0 +1,255 @@
+{
+   "Root": "\u003croot\u003e",
+   "Nodes": [
+    {
+     "id": "(github.com/ofabry/go-callvis/examples/main.calls).execution",
+     "attrs": {
+      "name": "execution",
+      "label": "(calls).execution",
+      "pos": {
+       "name": "main.go",
+       "line": 20
+      },
+      "isFocused": true,
+      "params": [
+       {
+        "name": "arg0",
+        "type": "github.com/ofabry/go-callvis/examples/main.calls"
+       }
+      ],
+      "pkgInRoot": false,
+      "pkg": "main"
+     }
+    },
+    {
+     "id": "github.com/ofabry/go-callvis/examples/main/mypkg.Regular",
+     "attrs": {
+      "name": "Regular",
+      "label": "Regular",
+      "pos": {
+       "name": "mypkg.go",
+       "line": 37
+      },
+      "isFocused": false,
+      "params": [],
+      "pkgInRoot": false,
+      "pkg": "mypkg"
+     }
+    },
+    {
+     "id": "(github.com/ofabry/go-callvis/examples/main.calls).invocation",
+     "attrs": {
+      "name": "invocation",
+      "label": "(calls).invocation",
+      "pos": {
+       "name": "main.go",
+       "line": 24
+      },
+      "isFocused": true,
+      "params": [
+       {
+        "name": "arg0",
+        "type": "github.com/ofabry/go-callvis/examples/main.calls"
+       }
+      ],
+      "pkgInRoot": false,
+      "pkg": "main"
+     }
+    },
+    {
+     "id": "(*github.com/ofabry/go-callvis/examples/main/mypkg.myType).Static",
+     "attrs": {
+      "name": "Static",
+      "label": "(*myType).Static",
+      "pos": {
+       "name": "mypkg.go",
+       "line": 34
+      },
+      "isFocused": false,
+      "params": [
+       {
+        "name": "t",
+        "type": "*github.com/ofabry/go-callvis/examples/main/mypkg.myType"
+       }
+      ],
+      "pkgInRoot": false,
+      "pkg": "mypkg"
+     }
+    },
+    {
+     "id": "(*github.com/ofabry/go-callvis/examples/main/mypkg.myType).Dynamic",
+     "attrs": {
+      "name": "Dynamic",
+      "label": "(*myType).Dynamic",
+      "pos": {
+       "name": "mypkg.go",
+       "line": 35
+      },
+      "isFocused": false,
+      "params": [
+       {
+        "name": "t",
+        "type": "*github.com/ofabry/go-callvis/examples/main/mypkg.myType"
+       }
+      ],
+      "pkgInRoot": false,
+      "pkg": "mypkg"
+     }
+    },
+    {
+     "id": "github.com/ofabry/go-callvis/examples/main.funcs",
+     "attrs": {
+      "name": "funcs",
+      "label": "funcs",
+      "pos": {
+       "name": "main.go",
+       "line": 14
+      },
+      "isFocused": true,
+      "params": [],
+      "pkgInRoot": false,
+      "pkg": "main"
+     }
+    },
+    {
+     "id": "github.com/ofabry/go-callvis/examples/main/mypkg.Exported",
+     "attrs": {
+      "name": "Exported",
+      "label": "Exported",
+      "pos": {
+       "name": "mypkg.go",
+       "line": 17
+      },
+      "isFocused": false,
+      "params": [],
+      "pkgInRoot": false,
+      "pkg": "mypkg"
+     }
+    },
+    {
+     "id": "github.com/ofabry/go-callvis/examples/main.main",
+     "attrs": {
+      "name": "main",
+      "label": "main",
+      "pos": {
+       "name": "main.go",
+       "line": 7
+      },
+      "isFocused": true,
+      "params": [],
+      "pkgInRoot": false,
+      "pkg": "main"
+     }
+    }
+   ],
+   "Edges": [
+    {
+     "from": "(github.com/ofabry/go-callvis/examples/main.calls).invocation",
+     "to": "(*github.com/ofabry/go-callvis/examples/main/mypkg.myType).Dynamic",
+     "attrs": {
+      "isDynamic": true,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": true,
+      "pos": {
+       "name": "main.go",
+       "line": 27
+      }
+     }
+    },
+    {
+     "from": "github.com/ofabry/go-callvis/examples/main.funcs",
+     "to": "github.com/ofabry/go-callvis/examples/main/mypkg.Exported",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": true,
+      "pos": {
+       "name": "main.go",
+       "line": 15
+      }
+     }
+    },
+    {
+     "from": "github.com/ofabry/go-callvis/examples/main.main",
+     "to": "github.com/ofabry/go-callvis/examples/main.funcs",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": false,
+      "pos": {
+       "name": "main.go",
+       "line": 8
+      }
+     }
+    },
+    {
+     "from": "github.com/ofabry/go-callvis/examples/main.main",
+     "to": "(github.com/ofabry/go-callvis/examples/main.calls).execution",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": false,
+      "pos": {
+       "name": "main.go",
+       "line": 10
+      }
+     }
+    },
+    {
+     "from": "github.com/ofabry/go-callvis/examples/main.main",
+     "to": "(github.com/ofabry/go-callvis/examples/main.calls).invocation",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": false,
+      "pos": {
+       "name": "main.go",
+       "line": 11
+      }
+     }
+    },
+    {
+     "from": "(github.com/ofabry/go-callvis/examples/main.calls).execution",
+     "to": "github.com/ofabry/go-callvis/examples/main/mypkg.Regular",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": true,
+      "pos": {
+       "name": "main.go",
+       "line": 21
+      }
+     }
+    },
+    {
+     "from": "(github.com/ofabry/go-callvis/examples/main.calls).invocation",
+     "to": "(*github.com/ofabry/go-callvis/examples/main/mypkg.myType).Static",
+     "attrs": {
+      "isDynamic": false,
+      "isGo": false,
+      "isDefer": false,
+      "isOutside": true,
+      "pos": {
+       "name": "main.go",
+       "line": 25
+      }
+     }
+    }
+   ],
+   "Packages": [
+    {
+     "path": "github.com/ofabry/go-callvis/examples/main/mypkg",
+     "name": "mypkg"
+    },
+    {
+     "path": "github.com/ofabry/go-callvis/examples/main",
+     "name": "main"
+    }
+   ]
+  }

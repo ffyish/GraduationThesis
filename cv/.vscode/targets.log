@@ -1,0 +1,380 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
+
+
+# Make data base, printed on Mon Jul  4 21:49:44 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 23)
+GO_LDFLAGS := -X main.commit=v0.6.1-11-g06b3e4b-dirty -w -s
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/leeseungho/Desktop/졸업논문/논문/file/cv
+# makefile (from `Makefile', line 1)
+SHELL := /usr/bin/env bash -o pipefail
+# makefile (from `Makefile', line 6)
+BUILD_DATE = $(shell date +%s)
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"26f3b44ea4f1e942cca002e9545643cc.ko","_translationsConfigFile":"/Users/leeseungho/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/tcf.json","_cacheRoot":"/Users/leeseungho/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko","_resolvedLanguagePackCoreLocation":"/Users/leeseungho/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/Users/leeseungho/Library/Application Support/Code/clp/26f3b44ea4f1e942cca002e9545643cc.ko/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 34)
+GO111MODULE = on
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/48/4g0j1lfj7l3cc8zps8k5clv00000gn/T/vscode-ipc-5dd39618-c5fc-445e-a91f-3099d0ebc614.sock
+# environment
+VSCODE_CWD = /
+# environment
+GOPROXY = https://proxy.golang.org,direct
+# environment
+PATH = /Users/leeseungho/.poetry/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS:/usr/local/go/bin:/Users/leeseungho/go/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from `Makefile', line 10)
+PROJECT := go-callvis
+# environment
+GOPATH = /Users/leeseungho/go
+# makefile (from `Makefile', line 8)
+BUILD_USER = $(shell id -un)
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 4)
+COMMIT = $(shell git rev-parse HEAD)
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.jDzGOSfhiR/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+GOBIN = /Users/leeseungho/go/bin
+# makefile (from `Makefile', line 15)
+PLATFORMS := linux-amd64 darwin-amd64
+# makefile (from `Makefile', line 35)
+DOCKER_BUILDKIT = 1
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/leeseungho/Desktop/졸업논문/논문/file/cv
+# makefile (from `Makefile', line 27)
+GO_BUILD_ARGS = -trimpath
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+GOMODCACHE = /Users/leeseungho/go/pkg/mod
+# environment
+HOME = /Users/leeseungho
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# makefile (from `Makefile', line 7)
+BUILD_HOST = $(shell hostname)
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/leeseungho/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+LOGNAME = leeseungho
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /Users/leeseungho/.oh-my-zsh
+# makefile (from `Makefile', line 17)
+GO_BUILD_TAGS = ""
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 11)
+BUILD_DIR = .build
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = leeseungho
+# makefile
+.DEFAULT_GOAL := help
+# environment
+DBUS_LAUNCHD_SESSION_BUS_SOCKET = /private/tmp/com.apple.launchd.yOcCmHkfkH/unix_domain_listener
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/48/4g0j1lfj7l3cc8zps8k5clv00000gn/T/
+# automatic
+*F = $(notdir $*)
+# makefile (from `Makefile', line 13)
+GOOS = $(shell go env GOOS)
+# environment
+VSCODE_IPC_HOOK = /Users/leeseungho/Library/Application Support/Code/1.68.1-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.8670351552.8670351558
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from `Makefile', line 3)
+GIT_VERSION = $(shell git describe --always --tags --match 'v*' --dirty)
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0:0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from `Makefile', line 5)
+BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# makefile (from `Makefile', line 14)
+GOARCH = amd64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# makefile (from `Makefile', line 20)
+GO_FILES :=  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/analysis.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/dot.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/dot_cgo.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/json_cg.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/main.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/output.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/version.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/examples/main/main.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/examples/main/mypkg/mypkg.go
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 99780
+# variable set hash-table stats:
+# Load=88/1024=9%, Rehash=0, Collisions=9/159=6%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777220, inode 8670703577): 26 files, no impossibilities.
+
+# 26 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+.build/go-callvis-%-amd64: /Users/leeseungho/Desktop/졸업논문/논문/file/cv/analysis.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/dot.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/dot_cgo.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/json_cg.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/main.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/output.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/version.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/examples/main/main.go  /Users/leeseungho/Desktop/졸업논문/논문/file/cv/examples/main/mypkg/mypkg.go .build
+ 
+#  commands to execute (from `Makefile', line 53):
+	GOOS=$* GOARCH=$(GOARCH) go build -tags $(GO_BUILD_TAGS) -ldflags "$(GO_LDFLAGS)" -o $@ $(GO_BUILD_ARGS)
+	
+
+%.sha256: %
+#  commands to execute (from `Makefile', line 56):
+	shasum -a 256 $< &> $@
+	
+
+# 2 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+.build/go-callvis-linux-amd64:
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: help build test install cross release clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PRECIOUS: .build/go-callvis-linux-amd64 .build/go-callvis-darwin-amd64
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cross: .build/go-callvis-linux-amd64.sha256 .build/go-callvis-darwin-amd64.sha256
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-26 18:15:20
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+test:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 44):
+	go test -tags $(GO_BUILD_TAGS) -ldflags "$(GO_LDFLAGS)" $(GO_BUILD_ARGS) -short -race ./...
+	
+
+build:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 41):
+	go build -tags $(GO_BUILD_TAGS) -ldflags "$(GO_LDFLAGS)" $(GO_BUILD_ARGS)
+	
+
+# Not a target:
+.build/go-callvis-darwin-amd64:
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 38):
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	
+
+.build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 59):
+	mkdir -p $(BUILD_DIR)
+	
+
+.build/go-callvis: .build/go-callvis-darwin-amd64
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 50):
+	cp $(BUILD_DIR)/$(PROJECT)-$(GOOS)-$(GOARCH) $@
+	
+
+release: cross
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 66):
+	ls -hl $(BUILD_DIR)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.build/go-callvis-linux-amd64.sha256:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 69):
+	rm -vrf $(BUILD_DIR)
+	
+
+# Not a target:
+.build/go-callvis-darwin-amd64.sha256:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+install:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 47):
+	go install -tags $(GO_BUILD_TAGS) -ldflags "$(GO_LDFLAGS)" $(GO_BUILD_ARGS)
+	
+
+# files hash-table stats:
+# Load=19/1024=2%, Rehash=0, Collisions=0/44=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Mon Jul  4 21:49:44 2022
+
+ 
