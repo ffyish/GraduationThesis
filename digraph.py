@@ -15,19 +15,12 @@ from ujson import load
 
 class OHCGraph(nx.DiGraph):
     @classmethod
-    def load_json(cls, f, as_id=True) -> "OHCGraph":
+    def load_json(cls, f, attrs=False) -> "OHCGraph":
         G = cls(directed=True)
         data = load(f)
         node_ids = dict()
-        if as_id:
-            id_order = 0
-            for node in data["Nodes"]:
-                if not node_ids.get(node["id"], False):
-                    node_ids[node["id"]] = id_order
-                    id_order += 1
-                    
-            # add Node
-            nodes = [(node_ids[node["id"]], node["attrs"]) for node in data["Nodes"]]
+        if not attrs:
+            nodes = [node['id'] for node in data['Nodes']]
         else:
             nodes = [(node["id"], node["attrs"]) for node in data["Nodes"]]
         # else:
@@ -51,12 +44,11 @@ class OHCGraph(nx.DiGraph):
         
         # add Edges
         
-        if as_id:
+        if not attrs:
             edges = [(
-                node_ids[edge["from"]],
-                node_ids[edge["to"]],
-                edge["attrs"]
-                ) for edge in data["Edges"]]
+                edge["from"],
+                edge["to"]
+            ) for edge in data["Edges"]]
         else:
             edges = [(
                 edge["from"],
@@ -70,8 +62,12 @@ class OHCGraph(nx.DiGraph):
                 return f"({label.split('/')[-1]}"
             else:
                 return label.split('/')[-1]
-        new_G = nx.relabel_nodes(G, {node:relabel(node) for node in G.nodes()})
-        return new_G
+            
+        if attrs:
+            new_G = nx.relabel_nodes(G, {node:relabel(node) for node in G.nodes()})
+            return new_G
+        else:
+            return G
     
     def _entry_exit(self):
         nodes = self.nodes(data=True)
@@ -125,18 +121,39 @@ class OHCGraph(nx.DiGraph):
     def get_feature_matrix(self) -> "OHCGraph":
         simpleG = self._to_simple_paths()
         entries, exits = simpleG._entry_exit()
-        paths = {}
-        idx = 1
-        print(entries, exits)
-        for ent in entries:
-            for ext in exits:
-                simple_paths = list(nx.all_simple_paths(simpleG, ent, ext))
-                if not simple_paths:
-                    continue
-                paths[f'path{idx}'] = {fn:1 for fn in simple_paths[0]}
-                idx+=1
-        fm = pd.DataFrame(paths, dtype='Int64').fillna(0).transpose()
-        return fm
+        def find_all_paths(_g:nx.DiGraph, entries:list):
+            all_paths = []
+            for ent in entries:
+                _cn = ent
+                _paths = [[_cn]]
+                _results = []
+                while _paths:
+                    __paths = []
+                    for idx, p in enumerate(_paths):
+                        _outs = list(_g.out_edges(p[-1]))
+                        if len(_outs) > 0:
+                            for f, t in _outs:
+                                __paths.append(p + [t])
+                        else:
+                            _results.append(_paths[idx])
+                            
+                    _paths = __paths
+                    print(len(_paths))
+                all_paths = all_paths + _paths
+                print(f"{ent} checked!")
+            return all_paths
+        
+        all_paths = find_all_paths(simpleG, entries)
+        print(len(all_paths))
+                
+                
+                
+        # print(f"ST FM {len(entries)} / {len(exits)}")
+        # simple_paths = list(nx.all_simple_paths(simpleG, source=tmp_root, target=exits))
+        # paths[f'path{idx}'] = {fn:1 for fn in simple_paths[0]}
+        # print("ED FM")
+        # fm = pd.DataFrame(paths, dtype='Int64').fillna(0).transpose()
+        return 
         
     
     def show(self):

@@ -19,13 +19,13 @@ type jsonEdgeAttrs struct {
 }
 
 type jsonNode struct {
-	ID    string     `json:"id"`
+	ID    int        `json:"id"`
 	Attrs *jsonAttrs `json:"attrs"`
 }
 
 type jsonEdge struct {
-	From  string         `json:"from"`
-	To    string         `json:"to"`
+	From  int            `json:"from"`
+	To    int            `json:"to"`
 	Attrs *jsonEdgeAttrs `json:"attrs"`
 }
 

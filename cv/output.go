@@ -114,7 +114,7 @@ func printOutputJson(
 	}
 
 	var isInter = func(edge *callgraph.Edge) bool {
-		//caller := edge.Caller
+		// caller := edge.Caller
 		callee := edge.Callee
 		if callee.Func.Object() != nil && !callee.Func.Object().Exported() {
 			return true
@@ -132,8 +132,8 @@ func printOutputJson(
 		posCaller := prog.Fset.Position(caller.Func.Pos())
 		posCallee := prog.Fset.Position(callee.Func.Pos())
 		posEdge := prog.Fset.Position(edge.Pos())
-		//fileCaller := fmt.Sprintf("%s:%d", posCaller.Filename, posCaller.Line)
-		filenameCaller := filepath.Base(posCaller.Filename)
+		// fileCaller := fmt.Sprintf("%s:%d", posCaller.Filename, posCaller.Line)
+		// filenameCaller := filepath.Base(posCaller.Filename)
 
 		// omit synthetic calls
 		if isSynthetic(edge) {
@@ -164,7 +164,7 @@ func printOutputJson(
 		// include path prefixes
 		if len(includePaths) > 0 &&
 			(inIncludes(caller) || inIncludes(callee)) {
-			logf("include: %s -> %s", caller, callee)
+			// logf("include: %s -> %s", caller, callee)
 			include = true
 		}
 
@@ -172,22 +172,22 @@ func printOutputJson(
 			// limit path prefixes
 			if len(limitPaths) > 0 &&
 				(!inLimits(caller) || !inLimits(callee)) {
-				logf("NOT in limit: %s -> %s", caller, callee)
+				// logf("NOT in limit: %s -> %s", caller, callee)
 				return nil
 			}
 
 			// ignore path prefixes
 			if len(ignorePaths) > 0 &&
 				(inIgnores(caller) || inIgnores(callee)) {
-				logf("IS ignored: %s -> %s", caller, callee)
+				// logf("IS ignored: %s -> %s", caller, callee)
 				return nil
 			}
 		}
 
-		//var buf bytes.Buffer
-		//data, _ := json.MarshalIndent(caller.Func, "", " ")
+		// var buf bytes.Buffer
+		// data, _ := json.MarshalIndent(caller.Func, "", " ")
 		//logf("call node: %s -> %s\n %v", caller, callee, string(data))
-		logf("call node: %s -> %s (%s -> %s) %v\n", caller.Func.Pkg, callee.Func.Pkg, caller, callee, filenameCaller)
+		// logf("call node: %s -> %s (%s -> %s) %v\n", caller.Func.Pkg, callee.Func.Pkg, caller, callee, filenameCaller)
 
 		var sprintNode = func(node *callgraph.Node, isCaller bool) *jsonNode {
 			// only once
@@ -265,7 +265,7 @@ func printOutputJson(
 			}
 
 			n := &jsonNode{
-				ID:    node.Func.String(),
+				ID:    node.ID,
 				Attrs: nodeAttrs,
 			}
 
