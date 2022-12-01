@@ -1,30 +1,39 @@
-import pickle
-from pprint import pp
+import json
+import pickle as pk
+from timeit import timeit
 
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from scipy.cluster.hierarchy import dendrogram, linkage
+import networkx as nx
 
-from agglo import AgglomerativeClustering
-from digraph import OHCGraph
+from libs.graph.base import BaseGraph
+from libs.graph.digraph import ClusterManager
 
-f = open("rclone.json","r")
+ff = open("sample.json")
+# gd = json.load(ff)
+# od = {n["id"]: f"f{i+1}" for i, n in enumerate(gd["Nodes"])}
+# nodes = [f"f{i+1}" for i, n in enumerate(gd["Nodes"])]
+# edges = [(od[e["from"]], od[e["to"]]) for e in gd["Edges"]]
+# # edges += [("f7", "f8")]
+# G = BaseGraph.load(nodes, edges)
+# print(nx.to_pandas_adjacency(G))
+# nx.draw_circular(G, with_labels=True)
+# plt.show()
+
+f = open("rclone.json", "r")
 # pd.set_option('display.max_columns', None)
 print("START LOADING....")
-G = OHCGraph.load_json(f, attrs=False)
-print("START FEATURE MATRIX")
-fm = G.get_feature_matrix()
-print("FM DONE")
-# print("START AHC")
-# cg_model = AgglomerativeClustering(fm)
-# print("AHC DONE")
-# with open("CGMODEL.pk", 'wb') as cgf:
-#     pickle.dump(G, cgf)
-#     print("SAVE CG...")
-    
-    
-# with open("AHCMODEL.pk", 'wb') as pkf:
-#     pickle.dump(cg_model, pkf)
-#     print("DONE!")
 
+result = pk.load(open("cluster_sample.pk", "rb"))
+G = BaseGraph.load_json(f, attrs=False)
+
+cycles = nx.simple_cycles(G)
+for c in cycles:
+    print(c)
+
+
+# model = nx.to_pandas_adjacency(G)
+# cm = ClusterManager(result, model, G)
+# gg = cm.graph(50)
+# options = {"with_labels": False, "node_size": 60}
+# nx.draw_kamada_kawai(gg, **options)
+# plt.show()

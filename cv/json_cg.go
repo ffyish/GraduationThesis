@@ -32,6 +32,7 @@ type jsonEdge struct {
 type jsonPos struct {
 	Name string `json:"name"`
 	Line int    `json:"line"`
+	Column int `json:"column"`
 }
 
 type jsonPkg struct {

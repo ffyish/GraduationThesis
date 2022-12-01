@@ -6,7 +6,6 @@ from scipy.cluster.hierarchy import dendrogram
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.datasets import load_iris
 
-
 def gen_graph(data) -> nx.DiGraph:
     G = nx.DiGraph(directed=True)
     

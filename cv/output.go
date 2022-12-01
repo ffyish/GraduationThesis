@@ -309,8 +309,9 @@ func printOutputJson(
 		}
 
 		edgePos := &jsonPos{
-			Name: filepath.Base(posEdge.Filename),
+			Name: posEdge.Filename,
 			Line: posEdge.Line,
+			Column: posEdge.Column,
 		}
 
 		// omit duplicate calls, except for tooltip enhancements

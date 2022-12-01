@@ -9,9 +9,8 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-from memory_profiler import profile
 from networkx.drawing.nx_pydot import graphviz_layout, to_pydot
-from tabulate import tabulate
+
 
 COLUMN = 1
 ROW = 0
