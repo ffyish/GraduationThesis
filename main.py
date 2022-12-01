@@ -28,3 +28,6 @@ print("FM DONE")
 #     pickle.dump(cg_model, pkf)
 #     print("DONE!")
 
+
+# PKGS=$(go list ./... | grep `go list`/ | xargs | tr ' ' ,) && ./go-callvis -focus "" -limit "${PKGS}" `go list`
+
